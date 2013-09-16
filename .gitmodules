@@ -1,0 +1,9 @@
+[submodule "angular.js"]
+	path = angular.js
+	url = git@github.com:angular/angular.js.git
+[submodule "ember.js"]
+	path = ember.js
+	url = git@github.com:emberjs/ember.js.git
+[submodule "knockout.js"]
+	path = knockout.js
+	url = git@github.com:knockout/knockout.git
