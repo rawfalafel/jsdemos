@@ -1,0 +1,5 @@
+rsync --quiet --human-readable\
+	--archive --delete --compress --cvs-exclude\
+	--exclude="\.git*" \
+	--exclude="sftp-config.json"\
+	~/projects/jsdemos yutaro@rawfalafel.com:~
