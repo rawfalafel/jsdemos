@@ -1,16 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"html/template"
-	"net/http"
+    "net/http"
+    "html/template"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+    t, _ := template.ParseFiles("index.html")
+    t.Execute(w, nil)
 }
 
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+    http.HandleFunc("/", handler)
+    http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("/home/yutaro/jsdemos/static"))))
+    http.ListenAndServe(":8080", nil)
 }
