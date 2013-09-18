@@ -2,12 +2,12 @@ package main
 
 import (
     "net/http"
-    "html/template"
+    "io/ioutil"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    t, _ := template.ParseFiles("index.html")
-    t.Execute(w, nil)
+    o, _ := ioutil.ReadFile("index.html")
+    w.Write(o)
 }
 
 func main() {
