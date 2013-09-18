@@ -1,8 +1,14 @@
 <html>
 <head>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
-    <script type="text/javasript" src="static/js/gol-angular.js"></script>
+    <script type="text/javascript" src="static/js/gol-angular.js"></script>
 </head>
-<body>
+<body ng-app>
+    <div class="grid" ng-controller="Grid">
+        <div ng-repeat="row in grid">
+            <span ng-repeat="cell in row" ng-click="toggle($index, $parent.$index)">{{ cell }}</span>
+        </div>
+    </div>
+    <!-- <input ng-model="grid" class="dimensions"/> -->
 </body>
 </html>
