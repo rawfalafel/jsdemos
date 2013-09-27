@@ -6,7 +6,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    o, _ := ioutil.ReadFile("index.html")
+    o, _ := ioutil.ReadFile("layout.html")
     w.Write(o)
 }
 

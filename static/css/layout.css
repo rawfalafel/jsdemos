@@ -1,0 +1,86 @@
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+#container {
+    padding-left: 280px;
+}
+
+#container .column {
+    position: relative;
+    float: left;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#main {
+    width: 100%;
+    background: blue;
+}
+
+.main-inner {
+    margin-left: 10px;
+    position: relative;
+    /* min-height: 100%; */
+}
+
+#header {
+    height: 110px;
+}
+
+#footer {
+    height: 90px;
+}
+
+#barbutton {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    background: #d5d9ba;
+    /* height: 100%; */
+    width: 10px;
+}
+
+#barbutton:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background-image: url('../img/sidebar-hide.png');
+    background-position: 282px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#side {
+    width: 280px;
+    right: 280px;
+    margin-left: -100%;
+    min-height: 100%;
+    font-size: 35px;
+}
+
+/* identifiers */
+#side {
+    background-color: yellow;
+}
+
+#header {
+    background-color: red;
+}
+
+#content {
+    background-color: blue;
+    font-size: 29px;
+    min-height: calc(100% - 200px);
+    min-height: -webkit-calc(100% - 200px);
+    min-height: -moz-calc(100% - 200px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#footer {
+    background-color: green;
+}
