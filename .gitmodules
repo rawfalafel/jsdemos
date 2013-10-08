@@ -7,3 +7,9 @@
 [submodule "knockout.js"]
 	path = knockout.js
 	url = git@github.com:knockout/knockout.git
+[submodule "bootstrap"]
+	path = bootstrap
+	url = git@github.com:twbs/bootstrap.git
+[submodule "select2"]
+	path = select2
+	url = git@github.com:ivaynberg/select2.git

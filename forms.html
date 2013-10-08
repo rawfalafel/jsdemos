@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="static/lib/js/bootstrap.js"></script>
+    <script type="text/javascript" src="static/lib/js/select2.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script type="text/javascript" src="static/js/forms.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/lib/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/lib/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="static/lib/css/select2.css">
+</head>
+<body ng-app="myApp">
+    <form name="selectForm" ng-controller="formController">
+        <select select2="girls" name="girls" required>
+            <option value="">Select a girl...</option>
+            <option value="june">June Wu</option>
+            <option value="lillian">Lillian Cheng</option>
+            <option value="pattie">Pattie Pak</option>
+        </select>
+        <select select2="drinks">
+            <option value="">Select a drink...</option>
+            <option value="vodka">Vodka</option>
+            <option value="tequila">Tequila</option>
+            <option value="soju">Soju</option>
+        </select>
+        <div ng-hide="selectForm.$valid">Required</div>
+    </form>
+</body>
+</html>
