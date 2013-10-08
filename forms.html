@@ -11,13 +11,14 @@
 </head>
 <body ng-app="myApp">
     <form name="selectForm" ng-controller="formController">
-        <select select2="girls" name="girls" required>
+        <select select2 ng-model="girls" name="girls" ng-required="true">
             <option value="">Select a girl...</option>
             <option value="june">June Wu</option>
             <option value="lillian">Lillian Cheng</option>
             <option value="pattie">Pattie Pak</option>
         </select>
-        <select select2="drinks">
+        <div ng-hide="selectForm.girls.$valid">Required</div>
+        <select select2 ng-model="drinks" ng-required="true">
             <option value="">Select a drink...</option>
             <option value="vodka">Vodka</option>
             <option value="tequila">Tequila</option>
